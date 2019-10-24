@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title> 
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head> 
+
+    <body>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Estate agency</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+
+        <div class="container">
+            <h1>Offer management</h1>
+            <div class="holder">
+                <button id="newOffBtn" class="btn btn-success btn-block">New Offer</button><br><br>
+                <form id="newForm">
+                    <div class="form-group row">
+                    <label for="city" class="col-sm-2 col-form-label">City</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="city" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="street" class="col-sm-2 col-form-label">Street</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="street" placeholder="Street">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="property" class="col-sm-2 col-form-label">Property</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="property" placeholder="Property">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="apartment" class="col-sm-2 col-form-label">Apartment</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="apartment" placeholder="Apartment">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="price" class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-10">
+                             <input type="number" class="form-control" id="price" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="type" class="col-sm-2 col-form-label">Type</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="type" placeholder="Type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="description" placeholder="Description">
+                        </div>
+                    </div>
+
+                    <button id="submitOffer" type="submit" class="btn btn-success">Add offer</button>
+                    </form>
+                    
+                    <div id="updateFormDiv">
+                    <form id="updateForm">
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="hidden" class="form-control" id="offerId">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateCity" class="col-sm-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="updateCity" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateStreet" class="col-sm-2 col-form-label">Street</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="updateStreet" placeholder="Street">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateProperty" class="col-sm-2 col-form-label">Property</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="updateProperty" placeholder="Property">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateApartment" class="col-sm-2 col-form-label">Apartment</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="updateApartment" placeholder="Apartment">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updatePrice" class="col-sm-2 col-form-label">Price</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="updatePrice" placeholder="Price">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateType" class="col-sm-2 col-form-label">Type</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="updateType" placeholder="Type">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <label for="updateDescription" class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="updateDescription" placeholder="Description">
+                            </div>
+                        </div>
+
+                        <button id="updateOff" type="submit" class="btn btn-success">Update offer</button>
+                        </form>
+                    </div>
+                </div>
+
+                    <table id="offerTable" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            <th>ID</th>
+                            <th>City</th>
+                            <th>Street</th>
+                            <th>Property</th>
+                            <th>Apartment</th>
+                            <th>Price</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Controls</th>
+                        </tr></thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+            <button class="btn btn-success" id="getAll">Get all offers</button>
+            <button class="btn btn-success" id="deleteAll">Delete all offers</button>
+        </div>
+
+
+
+    </body>
+</html>
